@@ -41,6 +41,6 @@ class CheckVerify extends MpSmsMutation
      */
     public function runFunction($context, $args)
     {
-        return $this->smsNotificationRepository->checkVerify($args['telephone']);
+        return $this->smsNotificationRepository->checkVerify($args['input']['telephone']);
     }
 }

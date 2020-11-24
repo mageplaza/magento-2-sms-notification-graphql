@@ -50,8 +50,8 @@ class SignUp extends MpSmsMutation
 
         return $this->smsNotificationRepository->registerNotification(
             $customerId,
-            $args['is_behavior'],
-            $args['is_order']
+            $args['input']['is_behavior'],
+            $args['input']['is_order']
         );
     }
 }

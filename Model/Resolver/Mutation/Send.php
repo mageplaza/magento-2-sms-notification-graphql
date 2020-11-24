@@ -41,6 +41,6 @@ class Send extends MpSmsMutation
      */
     public function runFunction($context, $args)
     {
-        return $this->smsNotificationRepository->sendOTP($args['telephone'], $args['store_id']);
+        return $this->smsNotificationRepository->sendOTP($args['input']['telephone'], $args['input']['store_id']);
     }
 }

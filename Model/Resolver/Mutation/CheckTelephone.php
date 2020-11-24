@@ -42,6 +42,6 @@ class CheckTelephone extends MpSmsMutation
      */
     public function runFunction($context, $args)
     {
-        return $this->smsNotificationRepository->verifyTelephone($args['telephone'], $args['code_OTP']);
+        return $this->smsNotificationRepository->verifyTelephone($args['input']['telephone'], $args['input']['code_OTP']);
     }
 }

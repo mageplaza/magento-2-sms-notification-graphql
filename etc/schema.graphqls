@@ -32,7 +32,7 @@ type Mutation {
     MpSmsNotificationSend(
         input: MpSmsNotificationSendInput! @doc(description: "Information of the send message.")
     ):Boolean @resolver(class: "Mageplaza\\SmsNotificationGraphQl\\Model\\Resolver\\Mutation\\Send") @doc(description: "Send OTP code to telephone.")
-    MpSmsNotificationSubcriber(
+    MpSmsNotificationSignUp(
         input: MpSmsNotificationSignUpInput! @doc(description: "Information of the subcriber sms notification.")
     ):Boolean @resolver(class: "Mageplaza\\SmsNotificationGraphQl\\Model\\Resolver\\Mutation\\SignUp") @doc(description: "Sign up to receive information.")
 }
