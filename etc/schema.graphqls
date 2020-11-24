@@ -1,0 +1,62 @@
+# Mageplaza
+#
+# NOTICE OF LICENSE
+#
+# This source file is subject to the Mageplaza.com license that is
+# available through the world-wide-web at this URL:
+# https://www.mageplaza.com/LICENSE.txt
+#
+# DISCLAIMER
+#
+# Do not edit or add to this file if you wish to upgrade this extension to newer
+# version in the future.
+#
+# @category    Mageplaza
+# @package     Mageplaza_SmsNotificationGraphQl
+# @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
+# @license     https://www.mageplaza.com/LICENSE.txt
+
+type Query {
+    MpSmsNotificationGetConfig(
+        storeId: Int @doc(description: "Store Id")
+    ):MpSmsNotificationConfigOutput @resolver(class: "Mageplaza\\SmsNotificationGraphQl\\Model\\Resolver\\Config") @doc(description: "The query get data for faqs config.")
+}
+
+type Mutation {
+    MpSmsNotificationCheckVerify(
+        input: MpSmsNotificationCheckVerifyInput! @doc(description: "Information of the check verify.")
+    ):Boolean @resolver(class: "Mageplaza\\SmsNotificationGraphQl\\Model\\Resolver\\Mutation\\CheckVerify") @doc(description: "Check verify.")
+    MpSmsNotificationCheckTelephone(
+        input: MpSmsNotificationCheckTelephoneInput! @doc(description: "Information of the check telephone.")
+    ):Boolean @resolver(class: "Mageplaza\\SmsNotificationGraphQl\\Model\\Resolver\\Mutation\\CheckTelephone") @doc(description: "Check telephone.")
+    MpSmsNotificationSend(
+        input: MpSmsNotificationSendInput! @doc(description: "Information of the send message.")
+    ):Boolean @resolver(class: "Mageplaza\\SmsNotificationGraphQl\\Model\\Resolver\\Mutation\\Send") @doc(description: "Send OTP code to telephone.")
+    MpSmsNotificationSubcriber(
+        input: MpSmsNotificationSignUpInput! @doc(description: "Information of the subcriber sms notification.")
+    ):Boolean @resolver(class: "Mageplaza\\SmsNotificationGraphQl\\Model\\Resolver\\Mutation\\Subcriber") @doc(description: "Sign up to receive information.")
+}
+
+input MpSmsNotificationCheckVerifyInput {
+    telephone: String! @doc(description: "telephone.")
+}
+input MpSmsNotificationCheckTelephoneInput {
+    telephone: String! @doc(description: "telephone.")
+    code_OTP: String! @doc(description: "otp code.")
+}
+input MpSmsNotificationSendInput {
+    telephone: String! @doc(description: "telephone.")
+    store_id: Int! @doc(description: "Store Id")
+}
+input MpSmsNotificationSignUpInput {
+    is_behavior: Boolean! @doc(description: "is subcriber behavior")
+    is_order: Boolean! @doc(description: "is subcriber Order")
+}
+
+type MpSmsNotificationConfigOutput {
+    general: MpSmsNotificationGeneralConfigOutput
+}
+type MpSmsNotificationGeneralConfigOutput {
+    enabled: Boolean @doc(description: "Is enabled"),
+    verify_phone_number: Boolean @doc(description: "OTP config"),
+}
