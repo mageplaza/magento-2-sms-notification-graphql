@@ -34,7 +34,7 @@ type Mutation {
     ):Boolean @resolver(class: "Mageplaza\\SmsNotificationGraphQl\\Model\\Resolver\\Mutation\\Send") @doc(description: "Send OTP code to telephone.")
     MpSmsNotificationSubcriber(
         input: MpSmsNotificationSignUpInput! @doc(description: "Information of the subcriber sms notification.")
-    ):Boolean @resolver(class: "Mageplaza\\SmsNotificationGraphQl\\Model\\Resolver\\Mutation\\Subcriber") @doc(description: "Sign up to receive information.")
+    ):Boolean @resolver(class: "Mageplaza\\SmsNotificationGraphQl\\Model\\Resolver\\Mutation\\SignUp") @doc(description: "Sign up to receive information.")
 }
 
 input MpSmsNotificationCheckVerifyInput {
