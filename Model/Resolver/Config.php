@@ -41,7 +41,7 @@ class Config implements ResolverInterface
     private $_helperData;
 
     /**
-     * Categories constructor.
+     * Config constructor.
      *
      * @param Data $helperData
      */
@@ -56,8 +56,9 @@ class Config implements ResolverInterface
      */
     public function resolve(Field $field, $context, ResolveInfo $info, array $value = null, array $args = null)
     {
-        $storeId = isset($args['storeId'])?$args['storeId']:null;
-
-        return $this->_helperData->getConfigValue(Data::CONFIG_MODULE_PATH, $storeId);
+        return $this->_helperData->getConfigValue(
+            Data::CONFIG_MODULE_PATH,
+            $context->getExtensionAttributes()->getStore()->getId()
+        );
     }
 }

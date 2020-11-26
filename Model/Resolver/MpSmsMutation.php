@@ -54,7 +54,7 @@ class MpSmsMutation implements ResolverInterface
     protected $getCustomer;
 
     /**
-     * Categories constructor.
+     * MpSmsMutation constructor.
      *
      * @param Data $helperData
      * @param SmsNotificationRepositoryInterface $smsNotificationRepository
@@ -79,7 +79,7 @@ class MpSmsMutation implements ResolverInterface
             throw new GraphQlInputException(__('The module is disabled'));
         }
 
-        return $this->runFunction($context,$args);
+        return $this->runFunction($context, $args);
     }
 
     /**

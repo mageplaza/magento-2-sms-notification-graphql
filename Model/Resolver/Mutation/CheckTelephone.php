@@ -23,7 +23,6 @@ declare(strict_types=1);
 
 namespace Mageplaza\SmsNotificationGraphQl\Model\Resolver\Mutation;
 
-use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Webapi\Exception;
 use Mageplaza\SmsNotificationGraphQl\Model\Resolver\MpSmsMutation;
 
@@ -42,6 +41,9 @@ class CheckTelephone extends MpSmsMutation
      */
     public function runFunction($context, $args)
     {
-        return $this->smsNotificationRepository->verifyTelephone($args['input']['telephone'], $args['input']['code_OTP']);
+        return $this->smsNotificationRepository->verifyTelephone(
+            $args['input']['telephone'],
+            $args['input']['code_OTP']
+        );
     }
 }
