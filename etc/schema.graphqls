@@ -47,8 +47,8 @@ input MpSmsNotificationSendInput {
     store_id: Int! @doc(description: "Store Id")
 }
 input MpSmsNotificationSignUpInput {
-    is_behavior: Boolean! @doc(description: "Is subcriber behavior")
-    is_order: Boolean! @doc(description: "Is subcriber Order")
+    is_behavior: Boolean! @doc(description: "Is signup behavior")
+    is_order: Boolean! @doc(description: "Is signup Order")
 }
 
 type MpSmsNotificationConfigOutput {
