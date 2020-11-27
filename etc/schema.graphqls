@@ -17,7 +17,7 @@
 # @license     https://www.mageplaza.com/LICENSE.txt
 
 type Query {
-    MpSmsNotificationGetConfig:MpSmsNotificationConfigOutput @resolver(class: "Mageplaza\\SmsNotificationGraphQl\\Model\\Resolver\\Config") @doc(description: "The query get data for faqs config.")
+    MpSmsNotificationGetConfig:MpSmsNotificationConfigOutput @resolver(class: "Mageplaza\\SmsNotificationGraphQl\\Model\\Resolver\\Config") @doc(description: "The query get data for SMS notification config.")
 }
 
 type Mutation {
@@ -31,24 +31,24 @@ type Mutation {
         input: MpSmsNotificationSendInput! @doc(description: "Information of the send message.")
     ):Boolean @resolver(class: "Mageplaza\\SmsNotificationGraphQl\\Model\\Resolver\\Mutation\\Send") @doc(description: "Send OTP code to telephone.")
     MpSmsNotificationSignUp(
-        input: MpSmsNotificationSignUpInput! @doc(description: "Information of the subcriber sms notification.")
+        input: MpSmsNotificationSignUpInput! @doc(description: "Information of the signup SMS notification.")
     ):Boolean @resolver(class: "Mageplaza\\SmsNotificationGraphQl\\Model\\Resolver\\Mutation\\SignUp") @doc(description: "Sign up to receive information.")
 }
 
 input MpSmsNotificationCheckVerifyInput {
-    telephone: String! @doc(description: "telephone.")
+    telephone: String! @doc(description: "Telephone.")
 }
 input MpSmsNotificationCheckTelephoneInput {
-    telephone: String! @doc(description: "telephone.")
-    code_OTP: String! @doc(description: "otp code.")
+    telephone: String! @doc(description: "Telephone.")
+    code_OTP: String! @doc(description: "Otp code.")
 }
 input MpSmsNotificationSendInput {
-    telephone: String! @doc(description: "telephone.")
+    telephone: String! @doc(description: "Telephone.")
     store_id: Int! @doc(description: "Store Id")
 }
 input MpSmsNotificationSignUpInput {
-    is_behavior: Boolean! @doc(description: "is subcriber behavior")
-    is_order: Boolean! @doc(description: "is subcriber Order")
+    is_behavior: Boolean! @doc(description: "Is subcriber behavior")
+    is_order: Boolean! @doc(description: "Is subcriber Order")
 }
 
 type MpSmsNotificationConfigOutput {
