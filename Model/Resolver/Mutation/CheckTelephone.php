@@ -25,6 +25,7 @@ namespace Mageplaza\SmsNotificationGraphQl\Model\Resolver\Mutation;
 
 use Magento\Framework\Webapi\Exception;
 use Mageplaza\SmsNotificationGraphQl\Model\Resolver\MpSmsMutation;
+use Magento\Framework\GraphQl\Query\Resolver\ContextInterface;
 
 /**
  * Class CheckTelephone
@@ -33,7 +34,7 @@ use Mageplaza\SmsNotificationGraphQl\Model\Resolver\MpSmsMutation;
 class CheckTelephone extends MpSmsMutation
 {
     /**
-     * @param $context
+     * @param ContextInterface $context
      * @param array $args
      *
      * @return bool|string

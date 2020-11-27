@@ -25,6 +25,7 @@ namespace Mageplaza\SmsNotificationGraphQl\Model\Resolver;
 
 use Magento\CustomerGraphQl\Model\Customer\GetCustomer;
 use Magento\Framework\GraphQl\Config\Element\Field;
+use Magento\Framework\GraphQl\Query\Resolver\ContextInterface;
 use Magento\Framework\GraphQl\Query\ResolverInterface;
 use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
 use Mageplaza\SmsNotification\Helper\Data;
@@ -83,7 +84,7 @@ class MpSmsMutation implements ResolverInterface
     }
 
     /**
-     * @param $context
+     * @param ContextInterface $context
      * @param array $args
      *
      * @return bool

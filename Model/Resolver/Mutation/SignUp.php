@@ -25,6 +25,7 @@ namespace Mageplaza\SmsNotificationGraphQl\Model\Resolver\Mutation;
 
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\GraphQl\Exception\GraphQlInputException;
+use Magento\Framework\GraphQl\Query\Resolver\ContextInterface;
 use Mageplaza\SmsNotificationGraphQl\Model\Resolver\MpSmsMutation;
 
 /**
@@ -34,7 +35,7 @@ use Mageplaza\SmsNotificationGraphQl\Model\Resolver\MpSmsMutation;
 class SignUp extends MpSmsMutation
 {
     /**
-     * @param $context
+     * @param ContextInterface $context
      * @param array $args
      *
      * @return bool

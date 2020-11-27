@@ -23,6 +23,7 @@ declare(strict_types=1);
 
 namespace Mageplaza\SmsNotificationGraphQl\Model\Resolver\Mutation;
 
+use Magento\Framework\GraphQl\Query\Resolver\ContextInterface;
 use Magento\Framework\Webapi\Exception;
 use Mageplaza\SmsNotificationGraphQl\Model\Resolver\MpSmsMutation;
 
@@ -33,7 +34,7 @@ use Mageplaza\SmsNotificationGraphQl\Model\Resolver\MpSmsMutation;
 class CheckVerify extends MpSmsMutation
 {
     /**
-     * @param $context
+     * @param ContextInterface $context
      * @param array $args
      *
      * @return bool|string
