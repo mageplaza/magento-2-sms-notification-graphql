@@ -39,7 +39,7 @@ class Send extends MpSmsMutation
      * @return bool
      * @throws LocalizedException
      */
-    public function runFunction($context, $args)
+    public function execute($context, $args)
     {
         return $this->smsNotificationRepository->sendOTP($args['input']['telephone'], $args['input']['store_id']);
     }

@@ -40,7 +40,7 @@ class SignUp extends MpSmsMutation
      * @return bool
      * @throws LocalizedException
      */
-    public function runFunction($context, $args)
+    public function execute($context, $args)
     {
         if ($context->getExtensionAttributes()->getIsCustomer() === false) {
             throw new GraphQlInputException(__('Can not sign up sms notification.'));

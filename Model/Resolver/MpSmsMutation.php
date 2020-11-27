@@ -79,7 +79,7 @@ class MpSmsMutation implements ResolverInterface
             throw new GraphQlInputException(__('The module is disabled'));
         }
 
-        return $this->runFunction($context, $args);
+        return $this->execute($context, $args);
     }
 
     /**
@@ -88,7 +88,7 @@ class MpSmsMutation implements ResolverInterface
      *
      * @return bool
      */
-    public function runFunction($context, $args)
+    public function execute($context, $args)
     {
         return true;
     }

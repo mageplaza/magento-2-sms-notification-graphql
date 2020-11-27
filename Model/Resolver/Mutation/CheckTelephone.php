@@ -39,7 +39,7 @@ class CheckTelephone extends MpSmsMutation
      * @return bool|string
      * @throws Exception
      */
-    public function runFunction($context, $args)
+    public function execute($context, $args)
     {
         return $this->smsNotificationRepository->verifyTelephone(
             $args['input']['telephone'],
