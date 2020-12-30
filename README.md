@@ -36,8 +36,8 @@ To perform GraphQL queries in Magento, please do the following requirements:
 
 ## 3. Devdocs
 
-- [Rest API & examples](https://documenter.getpostman.com/view/10589000/T1LPCRuN)
-- [GraphQL & examples](https://documenter.getpostman.com/view/10589000/TVmFifTs)
+- [Magento 2 SMS Notification Rest API & examples](https://documenter.getpostman.com/view/10589000/T1LPCRuN)
+- [Magento 2 SMS Notification GraphQL & examples](https://documenter.getpostman.com/view/10589000/TVmFifTs)
 
 ## 4. Contribute to this module
 
