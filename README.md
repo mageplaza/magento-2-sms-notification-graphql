@@ -23,7 +23,7 @@ php bin/magento setup:static-content:deploy
 ```
 
 **Note:**
-Magento 2 Sms Notification GraphQL requires installing [Mageplaza Sms Notification](https://www.mageplaza.com/magento-2-sms-notification/) in your Magento installation.
+Magento 2 SMS Notification GraphQL requires installing [Mageplaza SMS Notification](https://www.mageplaza.com/magento-2-sms-notification/) in your Magento installation.
 
 ## 2. How to use
 
@@ -32,7 +32,7 @@ To perform GraphQL queries in Magento, please do the following requirements:
 - Use Magento 2.3.x or higher. Set your site to [developer mode](https://www.mageplaza.com/devdocs/enable-disable-developer-mode-magento-2.html).
 - Set GraphQL endpoint as `http://<magento2-server>/graphql` in url box, click **Set endpoint**. 
 (e.g. `http://dev.site.com/graphql`)
-- To view the queries that the **Mageplaza SMS Notification GraphQL** extension supports, you can look in `Docs > Query` in the right corner
+- To view the queries that the **Mageplaza SMS Notification GraphQL** extension supports, you can look in `Docs > Query` in the right corner.
 
 ## 3. Devdocs
 
@@ -47,4 +47,4 @@ You can create a pull request so we will merge your changes main branch.
 ## 5. Get Support
 
 - Feel free to [contact us](https://www.mageplaza.com/contact.html) if you have any further questions.
-- if you like this project, please give us a **Star** ![star](https://i.imgur.com/S8e0ctO.png)
+- If you like this project, please give us a **Star** ![star](https://i.imgur.com/S8e0ctO.png)
